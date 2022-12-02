@@ -11,15 +11,17 @@
 |                                      Screenshot 1                                      |                                      Screenshot 2                                      |
 
 <!-- Synopsis -->
-Etude for ChArUco calibration.
+Etude for [ChArUco](https://docs.opencv.org/3.4/df/d4a/tutorial_charuco_detection.html) calibration.
 
 <!-- TOC -->
 - [Prerequisites](#prerequisites)
 - [How to](#how-to)
-  - [First time preparation](#first-time-preparation)
-    - [Init](#init)
-    - [Setup Git Hooks (Lefthook)](#setup-git-hooks-lefthook)
+  - [Use](#use)
+    - [Create board](#create-board)
   - [Develop](#develop)
+    - [First time preparation](#first-time-preparation)
+      - [Init](#init)
+      - [Setup Git Hooks (Lefthook)](#setup-git-hooks-lefthook)
     - [Start](#start)
     - [Format](#format)
     - [Lint](#lint)
@@ -63,9 +65,25 @@ clean                掃除
 help                 助言
 ```
 
-### First time preparation
+### Use
 
-#### Init
+#### Create board
+
+```shell
+python src/create_board.py --dpi 300 --paper A3
+```
+
+### Develop
+
+Commands that are often used during development should be prepared in `default`.
+
+```shell
+make
+```
+
+#### First time preparation
+
+##### Init
 
 To install some development commands, run below.
 
@@ -85,7 +103,7 @@ Install dependencies,
 pip install --upgrade pip && pip install -r requirements.txt
 ```
 
-#### Setup Git Hooks (Lefthook)
+##### Setup Git Hooks (Lefthook)
 
 To install [Lefthook](https://github.com/evilmartians/lefthook) via [Homebrew](https://brew.sh), `brew install lefthook`.
 
@@ -94,14 +112,6 @@ lefthook install
 ```
 
 Thereafter, each commit will validate by `make format` and `make lint`, and each push will validate by `make test` and [secretlint](https://github.com/secretlint/secretlint).
-
-### Develop
-
-Commands that are often used during development should be prepared in `default`.
-
-```shell
-make
-```
 
 #### Start
 
