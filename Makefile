@@ -8,7 +8,7 @@ OPEN_TARGET := http://0.0.0.0:8000/
 
 OPTS :=
 .DEFAULT_GOAL := default
-.PHONY: default init start open format lint doc sphinx clean help
+.PHONY: default init install start open format lint doc sphinx clean help
 
 default: ## 常用
 	start
@@ -21,8 +21,12 @@ ifeq ($(OS_NAME),Darwin)
 	brew install lefthook
 endif
 	direnv allow
+	python3 -m venv venv
 	lefthook install
 	@if [ $(OS_NAME) = "Darwin" ]; then say "The initialization process is complete." ; fi
+
+install: ## 導入
+	pip install -r requirements.txt
 
 start: ## 起動
 	python src/main.py
@@ -44,7 +48,6 @@ sphinx: format ## 文書
 	sphinx-apidoc --force --output-dir docs .
 	sphinx-build -a -b html docs docs/_build/
 	@if [ $(OS_NAME) = "Darwin" ]; then say "The document generation is complete." ; fi
-	make open OPEN_TARGET="./docs/_build/index.html"
 
 clean: down ## 掃除
 	rm -rfv logs/*

@@ -1,13 +1,16 @@
 {
   "cSpell.words": [
     "Anson",
+    "aruco",
     "Autobuild",
     "azuretools",
+    "Charuco",
     "CODECOV",
     "codeql",
     "commitizen",
     "direnv",
     "dotenv",
+    "imwrite",
     "lefthook",
     "loguru",
     "markdownlint",
@@ -22,6 +25,7 @@
     "sider",
     "toolsai",
     "tqdm",
+    "venv",
     "yzhang"
   ],
   "python.formatting.provider": "black",

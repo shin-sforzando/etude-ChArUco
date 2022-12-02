@@ -4,6 +4,14 @@ src package
 Submodules
 ----------
 
+src.create\_board module
+------------------------
+
+.. automodule:: src.create_board
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 src.main module
 ---------------
 

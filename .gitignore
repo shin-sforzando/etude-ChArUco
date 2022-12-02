@@ -531,7 +531,8 @@ modules.xml
 *.tax2010
 *.vcf
 *.xml
-
+*.png
+*.tiff
 
 ### direnv ###
 .direnv

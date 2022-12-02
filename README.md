@@ -2,12 +2,8 @@
 
 <!-- Badges -->
 [![Last Commit](https://img.shields.io/github/last-commit/shin-sforzando/etude-ChArUco)](https://github.com/shin-sforzando/etude-ChArUco/graphs/commit-activity)
-[![CI](https://github.com/shin-sforzando/etude-ChArUco/actions/workflows/ci.yml/badge.svg)](https://github.com/shin-sforzando/etude-ChArUco/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/shin-sforzando/etude-ChArUco/branch/main/graph/badge.svg?token=TDCVLUJ4RF)](https://codecov.io/gh/shin-sforzando/etude-ChArUco)
-[![GitHub Pages](https://github.com/shin-sforzando/etude-ChArUco/actions/workflows/pages.yml/badge.svg)](https://shin-sforzando.github.io/etude-ChArUco/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6067/badge)](https://bestpractices.coreinfrastructure.org/projects/6067)
 
 <!-- Screenshots -->
 | ![Screenshot 1](https://placehold.jp/32/3d4070/ffffff/720x480.png?text=Screenshot%201) | ![Screenshot 2](https://placehold.jp/32/703d40/ffffff/720x480.png?text=Screenshot%202) |
@@ -56,6 +52,7 @@ Etude for ChArUco calibration.
 $ make help
 default              常用
 init                 初期
+install              導入
 start                起動
 open                 閲覧
 format               整形
@@ -74,6 +71,18 @@ To install some development commands, run below.
 
 ```shell
 make init
+```
+
+After that, all actions must be taken in a venv environment.
+
+```shell
+source venv/bin/activate
+```
+
+Install dependencies,
+
+```shell
+pip install --upgrade pip && pip install -r requirements.txt
 ```
 
 #### Setup Git Hooks (Lefthook)

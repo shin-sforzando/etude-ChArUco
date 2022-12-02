@@ -1,4 +1,11 @@
 # for prod
+click
+matplotlib
+numpy
+opencv-python
+opencv-contrib-python
+pandas
+Pillow
 python-dotenv
 tqdm
 # for dev
