@@ -6,6 +6,7 @@
     "CODECOV",
     "codeql",
     "commitizen",
+    "direnv",
     "dotenv",
     "lefthook",
     "loguru",
